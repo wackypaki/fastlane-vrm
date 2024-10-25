@@ -1,140 +1,134 @@
-/* Import narrower font for titles */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* General body styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #222;
-}
-
-/* Header styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
     background-color: #fff;
     color: #222;
-    border-bottom: 1px solid #ddd;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+/* Header and Footer styling */
+header, footer {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0; /* Reduced padding */
+    text-align: center;
 }
 
-.logo img {
-    width: 40px;
-    margin-right: 10px;
-}
-
-nav ul {
-    display: flex;
+.nav-container ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    margin: 0 10px;
+.nav-container ul li {
+    display: inline;
+    margin: 0 10px; /* Reduced margin */
 }
 
-nav ul li a {
-    color: #222;
+.nav-container ul li a {
+    color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
 
+.nav-container ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Main content */
 main {
-    padding: 20px;
-    max-width: 900px;
+    padding: 15px; /* Reduced padding */
+    max-width: 850px; /* Narrowed the page */
     margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Vehicle details section */
 .vehicle-details {
-    background-color: #fff;
-    padding: 12px;
-    border-radius: 12px;
+    background-color: #f7f7f7;
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    margin-bottom: 15px; /* Reduced bottom margin */
-}
-
-h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    color: #222;
-    margin: 0 0 8px; /* Reduced bottom margin */
+    margin-bottom: 12px; /* Reduced margin */
 }
 
 /* Section headers */
-.section-header {
+.section-header, .gallery-section-header, .image-gallery h2 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
-    font-weight: 500;
-    color: #222;
-    padding: 8px 12px;
-    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #333;
+    padding: 6px 0; /* Reduced padding */
+    background-color: #f7f7f7;
     border-radius: 8px;
-    margin: 0 0 10px; /* Reduced bottom margin */
+    margin: 0 0 5px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Sub-headers */
 .sub-header {
-    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
     font-weight: 500;
-    color: #333;
-    margin-bottom: 6px; /* Reduced bottom margin */
+    color: #444;
+    margin-bottom: 6px; /* Reduced margin */
 }
 
+/* Top section for main title and button */
 .top-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 15px; /* Increased margin for spacing before the image */
+}
+
+.top-section h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 600; /* Slightly bolder than before */
+    color: #222;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .main-image img {
     width: 100%;
     border-radius: 12px;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 8px; /* Reduced margin */
 }
 
 .contact-seller {
     background-color: #007BFF;
     color: #fff;
-    padding: 8px 15px;
+    padding: 6px 12px;
     border: none;
     border-radius: 6px;
     font-size: 13px;
     cursor: pointer;
     font-weight: 500;
+    margin-left: 10px; /* Slight gap between title and button */
+    align-self: flex-start;
 }
-
 /* Image gallery styling */
 .image-gallery {
-    margin-bottom: 15px; /* Reduced bottom margin */
-}
-
-.image-gallery h2 {
-    margin-left: 0;
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #222;
+    margin-bottom: 12px; /* Reduced margin */
 }
 
 .gallery-row {
     display: flex;
-    gap: 6px;
-    margin-bottom: 10px; /* Reduced margin */
+    gap: 4px; /* Reduced gap */
+    margin-bottom: 8px;
 }
 
 .gallery-row img {
-    width: calc(20% - 6px);
+    width: calc(20% - 4px); /* Slightly narrower images */
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -146,22 +140,24 @@ h1 {
 
 /* Pricing and vehicle info sections */
 .price-container, .vehicle-info, .seller-description, .maintenance-history {
-    background-color: #fff;
-    padding: 10px; /* Slightly reduced padding */
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    margin-bottom: 15px; /* Reduced bottom margin */
+    background-color: #f7f7f7;
+    padding: 8px; /* Reduced padding */
+    border-radius: 8px;
+    margin-bottom: 12px; /* Reduced margin */
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Tables */
 .price-container table, .vehicle-info table, .maintenance-history table {
     width: 100%;
     table-layout: fixed;
-    margin-bottom: 8px; /* Reduced margin */
-    background-color: #f0f0f0;
+    margin-bottom: 6px; /* Reduced margin */
+    background-color: #f9f9f9;
 }
 
 table th, table td {
-    padding: 8px 10px;
+    padding: 6px 8px; /* Reduced padding */
     text-align: left;
     font-size: 13px;
     color: #333;

@@ -8,20 +8,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Fastlane Logo">
-            <span>FASTLANE</span>
-        </div>
-        <nav>
+        <div class="nav-container">
             <ul>
-                <li><a href="#">RESEARCH</a></li>
-                <li><a href="#">BUY</a></li>
-                <li><a href="#">SELL</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Sell</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
         <section class="vehicle-details">
             <div class="top-section">
@@ -30,36 +28,36 @@
             </div>
             
             <div class="main-image">
-                <img id="mainImage" src="images/main.jpg" alt="BMW M3">
+                <img src="images/main.jpg" alt="BMW M3">
             </div>
 
             <div class="image-gallery">
-                <h2>Exterior</h2>
+                <h2 class="section-header">Exterior</h2>
                 <div class="gallery-row" id="exterior">
-                    <img src="images/ext1.jpg" alt="Exterior Image 1" onclick="changeMainImage('images/ext1.jpg')">
-                    <img src="images/ext2.jpg" alt="Exterior Image 2" onclick="changeMainImage('images/ext2.jpg')">
-                    <img src="images/ext3.jpg" alt="Exterior Image 3" onclick="changeMainImage('images/ext3.jpg')">
-                    <img src="images/ext4.jpg" alt="Exterior Image 4" onclick="changeMainImage('images/ext4.jpg')">
+                    <img src="images/ext1.jpg" alt="Exterior Image 1">
+                    <img src="images/ext2.jpg" alt="Exterior Image 2">
+                    <img src="images/ext3.jpg" alt="Exterior Image 3">
+                    <img src="images/ext4.jpg" alt="Exterior Image 4">
                 </div>
 
-                <h2>Interior</h2>
+                <h2 class="section-header">Interior</h2>
                 <div class="gallery-row" id="interior">
-                    <img src="images/int1.jpg" alt="Interior Image 1" onclick="changeMainImage('images/int1.jpg')">
-                    <img src="images/int2.jpg" alt="Interior Image 2" onclick="changeMainImage('images/int2.jpg')">
-                    <img src="images/int3.jpg" alt="Interior Image 3" onclick="changeMainImage('images/int3.jpg')">
+                    <img src="images/int1.jpg" alt="Interior Image 1">
+                    <img src="images/int2.jpg" alt="Interior Image 2">
+                    <img src="images/int3.jpg" alt="Interior Image 3">
                 </div>
 
-                <h2>Suspension / Engine / Misc</h2>
+                <h2 class="section-header">Suspension / Engine / Misc</h2>
                 <div class="gallery-row" id="misc">
-                    <img src="images/misc1.jpg" alt="Misc Image 1" onclick="changeMainImage('images/misc1.jpg')">
-                    <img src="images/misc2.jpg" alt="Misc Image 2" onclick="changeMainImage('images/misc2.jpg')">
-                    <img src="images/misc3.jpg" alt="Misc Image 3" onclick="changeMainImage('images/misc3.jpg')">
-                    <img src="images/misc4.jpg" alt="Misc Image 4" onclick="changeMainImage('images/misc4.jpg')">
+                    <img src="images/misc1.jpg" alt="Misc Image 1">
+                    <img src="images/misc2.jpg" alt="Misc Image 2">
+                    <img src="images/misc3.jpg" alt="Misc Image 3">
+                    <img src="images/misc4.jpg" alt="Misc Image 4">
                 </div>
             </div>
 
             <div class="price-container">
-                <h2>Price</h2>
+                <h2 class="section-header">Price</h2>
                 <table>
                     <tr>
                         <td>Asking Price:</td>
@@ -73,15 +71,11 @@
                         <td>Negotiable:</td>
                         <td>Yes</td>
                     </tr>
-                    <tr>
-                        <td>Price Analysis:</td>
-                        <td><canvas id="priceHistoryChart"></canvas></td>
-                    </tr>
                 </table>
             </div>
 
             <div class="vehicle-info">
-                <h2>Vehicle Information</h2>
+                <h2 class="section-header">Vehicle Information</h2>
                 <table>
                     <tr>
                         <td>VIN</td>
@@ -135,12 +129,12 @@
             </div>
 
             <div class="seller-description">
-                <h2>Seller's Description</h2>
+                <h2 class="section-header">Seller's Description</h2>
                 <p>Original owner, 6-speed, carbon roof, clean title, no accidents or paintwork, all records, only dealer serviced, serious buyers only.</p>
             </div>
 
             <div class="maintenance-history">
-                <h2>Maintenance & Vehicle History</h2>
+                <h2 class="section-header">Maintenance & Vehicle History</h2>
                 <h3>Commonly Occurring Faults</h3>
                 <table id="common-problems">
                     <tr>
@@ -168,10 +162,17 @@
         </section>
     </main>
 
-    <script>
-        function changeMainImage(imageSrc) {
-            document.getElementById('mainImage').src = imageSrc;
-        }
-    </script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
