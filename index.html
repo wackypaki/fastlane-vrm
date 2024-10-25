@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Authority</title>
+    <title>Vehicle Listing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Vehicle Authority Logo">
-            <span>VEHICLE AUTHORITY</span>
+            <img src="logo.png" alt="Fastlane Logo">
+            <span>FASTLANE</span>
         </div>
         <nav>
             <ul>
@@ -23,27 +24,154 @@
 
     <main>
         <section class="vehicle-details">
-            <h1>2008 BMW M3 | $35,500</h1>
-            <button class="contact-seller">Contact Seller</button>
+            <div class="top-section">
+                <h1>2008 BMW M3 | $35,500</h1>
+                <button class="contact-seller">Contact Seller</button>
+            </div>
+            
             <div class="main-image">
-                <img src="bmw-main.jpg" alt="BMW M3">
+                <img id="mainImage" src="images/main.jpg" alt="BMW M3">
             </div>
+
             <div class="image-gallery">
-                <!-- Add gallery images here -->
+                <h2>Exterior</h2>
+                <div class="gallery-row" id="exterior">
+                    <img src="images/ext1.jpg" alt="Exterior Image 1" onclick="changeMainImage('images/ext1.jpg')">
+                    <img src="images/ext2.jpg" alt="Exterior Image 2" onclick="changeMainImage('images/ext2.jpg')">
+                    <img src="images/ext3.jpg" alt="Exterior Image 3" onclick="changeMainImage('images/ext3.jpg')">
+                    <img src="images/ext4.jpg" alt="Exterior Image 4" onclick="changeMainImage('images/ext4.jpg')">
+                </div>
+
+                <h2>Interior</h2>
+                <div class="gallery-row" id="interior">
+                    <img src="images/int1.jpg" alt="Interior Image 1" onclick="changeMainImage('images/int1.jpg')">
+                    <img src="images/int2.jpg" alt="Interior Image 2" onclick="changeMainImage('images/int2.jpg')">
+                    <img src="images/int3.jpg" alt="Interior Image 3" onclick="changeMainImage('images/int3.jpg')">
+                </div>
+
+                <h2>Suspension / Engine / Misc</h2>
+                <div class="gallery-row" id="misc">
+                    <img src="images/misc1.jpg" alt="Misc Image 1" onclick="changeMainImage('images/misc1.jpg')">
+                    <img src="images/misc2.jpg" alt="Misc Image 2" onclick="changeMainImage('images/misc2.jpg')">
+                    <img src="images/misc3.jpg" alt="Misc Image 3" onclick="changeMainImage('images/misc3.jpg')">
+                    <img src="images/misc4.jpg" alt="Misc Image 4" onclick="changeMainImage('images/misc4.jpg')">
+                </div>
             </div>
-            <div class="price-details">
-                <!-- Add price and price analysis section here -->
+
+            <div class="price-container">
+                <h2>Price</h2>
+                <table>
+                    <tr>
+                        <td>Asking Price:</td>
+                        <td>$35,500</td>
+                    </tr>
+                    <tr>
+                        <td>Average Market Price:</td>
+                        <td>$34,000</td>
+                    </tr>
+                    <tr>
+                        <td>Negotiable:</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Price Analysis:</td>
+                        <td><canvas id="priceHistoryChart"></canvas></td>
+                    </tr>
+                </table>
             </div>
-            <div class="vehicle-information">
-                <!-- Vehicle specs go here (Year, Make, Model, etc.) -->
+
+            <div class="vehicle-info">
+                <h2>Vehicle Information</h2>
+                <table>
+                    <tr>
+                        <td>VIN</td>
+                        <td>WBSWD935X8PY41452</td>
+                    </tr>
+                    <tr>
+                        <td>Year / Make / Model</td>
+                        <td>2008 BMW M3</td>
+                    </tr>
+                    <tr>
+                        <td>Trim</td>
+                        <td>Base Coupe 2D</td>
+                    </tr>
+                    <tr>
+                        <td>Body Style</td>
+                        <td>Coupe</td>
+                    </tr>
+                    <tr>
+                        <td>Miles</td>
+                        <td>38,381</td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td>Alpine White / Black</td>
+                    </tr>
+                    <tr>
+                        <td>Title</td>
+                        <td>Clean - CA</td>
+                    </tr>
+                    <tr>
+                        <td>Engine</td>
+                        <td>4.0L V8</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission</td>
+                        <td>6-Speed Manual</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Pedals</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Registration</td>
+                        <td>Current</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Santa Monica, CA</td>
+                    </tr>
+                </table>
             </div>
+
             <div class="seller-description">
-                <!-- Seller's description here -->
+                <h2>Seller's Description</h2>
+                <p>Original owner, 6-speed, carbon roof, clean title, no accidents or paintwork, all records, only dealer serviced, serious buyers only.</p>
             </div>
+
             <div class="maintenance-history">
-                <!-- Maintenance and history section here -->
+                <h2>Maintenance & Vehicle History</h2>
+                <h3>Commonly Occurring Faults</h3>
+                <table id="common-problems">
+                    <tr>
+                        <th>Problem</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Rod Bearings</td>
+                        <td>✔️</td>
+                        <td>Replaced at 25k miles by BMW Engineering</td>
+                    </tr>
+                    <tr>
+                        <td>Throttle Actuators</td>
+                        <td>✔️</td>
+                        <td>Replaced under warranty</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission Pan Gasket</td>
+                        <td>❌</td>
+                        <td>Inspected, no leaks present</td>
+                    </tr>
+                </table>
             </div>
         </section>
     </main>
+
+    <script>
+        function changeMainImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+    </script>
 </body>
 </html>

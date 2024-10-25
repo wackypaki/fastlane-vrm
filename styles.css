@@ -1,14 +1,24 @@
+/* Import narrower font for titles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
 }
 
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #222;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo {
@@ -17,7 +27,7 @@ header {
 }
 
 .logo img {
-    width: 50px;
+    width: 40px;
     margin-right: 10px;
 }
 
@@ -27,44 +37,143 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #222;
     text-decoration: none;
+    font-size: 13px;
 }
 
+/* Main content */
 main {
     padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* Vehicle details section */
 .vehicle-details {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #222;
+    margin: 0 0 8px; /* Reduced bottom margin */
+}
+
+/* Section headers */
+.section-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 0 0 10px; /* Reduced bottom margin */
+    width: 100%;
+}
+
+/* Sub-headers */
+.sub-header {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px; /* Reduced bottom margin */
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .main-image img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .contact-seller {
     background-color: #007BFF;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 13px;
     cursor: pointer;
+    font-weight: 500;
 }
 
+/* Image gallery styling */
 .image-gallery {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced bottom margin */
 }
 
-.price-details, .vehicle-information, .seller-description, .maintenance-history {
-    margin-bottom: 20px;
+.image-gallery h2 {
+    margin-left: 0;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.gallery-row img {
+    width: calc(20% - 6px);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing and vehicle info sections */
+.price-container, .vehicle-info, .seller-description, .maintenance-history {
+    background-color: #fff;
+    padding: 10px; /* Slightly reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.price-container table, .vehicle-info table, .maintenance-history table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 8px; /* Reduced margin */
+    background-color: #f0f0f0;
+}
+
+table th, table td {
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 13px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+table th {
+    background-color: #eaeaea;
+    font-weight: 500;
+    color: #222;
+}
+
+table td {
+    color: #333;
 }
